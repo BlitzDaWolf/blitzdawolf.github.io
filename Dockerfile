@@ -1,9 +1,7 @@
 FROM node:latest
 
-ENV REPOSITORY=
-
 COPY . /var/www
-WORKDIR /var/www
+WORKDIR /var/www/src
 
 RUN npm install && \
     npm install -g http-server && \
@@ -11,4 +9,4 @@ RUN npm install && \
 
 EXPOSE 80
 
-CMD [ "sh ./pull.sh" ]
+CMD [ "http-server -p 80 ./dist/" ]
