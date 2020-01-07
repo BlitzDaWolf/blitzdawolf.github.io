@@ -1,7 +1,7 @@
 FROM node:latest
 
-COPY . /bin/www
-WORKDIR /bin/www/src
+COPY . /var/www
+WORKDIR /var/www/src
 
 RUN npm install && \
     npm install -g http-server && \
