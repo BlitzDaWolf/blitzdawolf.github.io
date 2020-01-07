@@ -4,8 +4,8 @@ COPY . /bin/www
 WORKDIR /bin/www/src
 
 RUN npm install && \
-    npm run build && \
-    npm install -g http-server
+    npm install -g http-server && \
+    npm run build
 
 EXPOSE 80
 
